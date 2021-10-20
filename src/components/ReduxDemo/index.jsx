@@ -1,19 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {getUserDate,delUserDate} from "../../redux/actions/UserInfo"
+import {getUserDate,delUserDate} from "../../redux/actions/user"
 import {nanoid} from 'nanoid'
 import { Input } from 'antd';
 import Abc from './abc'
 const { Search } = Input;
  class ReduxDemo extends Component {
-     // 增加
-    increment=()=>{
-        this.props.increment(3)
-    }
-    // 减
-    decrement=()=>{
-        this.props.decrement(3)
-    }
     //添加信息
     setInfo=(e)=>{
         if(!e) return
@@ -53,6 +45,6 @@ const { Search } = Input;
 }
 export default connect(
     state=>({
-        userInfo:state.userInfo
+        userInfo:state.user
     }),
     { getUserDate,delUserDate})(ReduxDemo)

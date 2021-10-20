@@ -1,5 +1,6 @@
 import {INCREMENT,DECREMENT} from '../constant'
-function count(preState,action){
+console.log(1);
+function count(preState=0,action){
     const {type,data}=action
     switch (type) {
         case INCREMENT:
@@ -7,7 +8,7 @@ function count(preState,action){
         case DECREMENT:
         return preState-data*1
         default:
-           return 0
+           return preState
     }
 }
 export default count

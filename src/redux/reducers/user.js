@@ -1,6 +1,7 @@
 import {GETUSERDATE,DELUSERDATE} from '../constant'
 const userInfos=[{name:'李响',age:24,id:77}]
-function userInfo(preState,action){
+function userInfoReducer(preState=userInfos,action){
+    console.log(2);
     const {type,data}=action
     switch (type) {
         case GETUSERDATE:
@@ -12,4 +13,4 @@ function userInfo(preState,action){
            return userInfos
     }
 }
-export default userInfo
+export default userInfoReducer

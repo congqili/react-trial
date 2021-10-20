@@ -11,7 +11,8 @@ import { Provider } from "react-redux"
 //     ReactDOM.render(<BrowserRouter><App/></BrowserRouter>,document.getElementById('root'))
 // })
 /*
-    Provider：如果使用容器组件content就不需要storestore.subscribe(handler)
+    Provider：如果使用容器组件，就不需要storestore.subscribe(handler)
+    storestore.subscribe(handler):在组件中使用，当store改变时触发。
  */
 ReactDOM.render(
     <BrowserRouter>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {increment,decrement} from "../../redux/actions/Count"
+import {increment,decrement} from "../../redux/actions/count"
 import {nanoid} from 'nanoid'
 import { Button} from 'antd';
  class ReduxDemo extends Component {
@@ -36,8 +36,6 @@ import { Button} from 'antd';
 }
 export default connect(
     state=>({
-
-
         count:state.count
     }),
     { increment,decrement})(ReduxDemo)
